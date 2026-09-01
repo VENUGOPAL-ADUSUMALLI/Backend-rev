@@ -82,4 +82,3 @@ select user_id,sum(price) as total_spent from ORDERS group by user_id having tot
 select max(quantity) from ORDERITEMS;
 select sum(quantity) from ORDERITEMS;
 select user.id, orders.id from user inner join orders on user.id = orders.user_id;
-
