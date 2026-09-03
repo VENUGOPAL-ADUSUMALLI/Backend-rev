@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ClaudeCodeEditorTabs">
+    <option name="activeSessionId" value="306ade55-96af-4042-9a7e-f084ed1fbcdb" />
+    <option name="openSessionIds">
+      <list>
+        <option value="306ade55-96af-4042-9a7e-f084ed1fbcdb" />
+      </list>
+    </option>
     <option name="sessionPaths">
       <map>
+        <entry key="306ade55-96af-4042-9a7e-f084ed1fbcdb" value="/sessions/97db5a1c-15af-41e6-9c49-46d26334cdc9" />
         <entry key="c3cba5b9-42d2-4811-8570-02a499c52a34" value="/sessions/35a878a5-f639-4638-a0c2-cbde049b191e" />
       </map>
     </option>
     <option name="sessionTitles">
       <map>
+        <entry key="306ade55-96af-4042-9a7e-f084ed1fbcdb" value="http://127.0.0.1:8000/admin/backend_rev/products/" />
         <entry key="c3cba5b9-42d2-4811-8570-02a499c52a34" value="how to run this sql file and feed models into that" />
       </map>
     </option>
