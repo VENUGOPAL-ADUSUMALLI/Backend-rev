@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 from backend_rev.views import *
 router = DefaultRouter()
@@ -26,7 +30,10 @@ router.register(
     basename="product"
 )
 urlpatterns = [
+    path("api/token", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path('admin/', admin.site.urls),
+    path("api/register", CreateUserView.as_view(), name="register")
 #     path("view_product/", product_view, name="product-list" ),
 #     path("products", ProductView.as_view(),name="view-list" ),
 #     path("products/<int:pk>", ProductDetailedView.as_view(), name="product-view")

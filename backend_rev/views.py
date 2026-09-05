@@ -2,17 +2,18 @@ from django.db.models import QuerySet
 from django.shortcuts import render
 from rest_framework import response
 from rest_framework.decorators import api_view, action
-from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView, RetrieveUpdateDestroyAPIView, \
+    CreateAPIView
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
-
+from rest_framework.permissions import IsAuthenticated
 from . import serailzers
 from .models import Product
 from rest_framework.response import Response
 
 # Create your views here.
 def product_view(request):
-    products = Product.objects.all();
+    products = Product.objects.all()
     return  render(
         request,
         "products.html",
@@ -62,3 +63,7 @@ class ProductViewSet(ModelViewSet):
         })
 
 
+
+
+class CreateUserView(CreateAPIView):
+    serializer_class = serailzers.RegisterPassword
