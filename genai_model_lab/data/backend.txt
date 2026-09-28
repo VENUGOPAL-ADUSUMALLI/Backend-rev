@@ -1,0 +1,18 @@
+Python is a high-level programming language widely used for backend development.
+Python has a simple syntax and a large ecosystem of libraries.
+
+Django is a Python web framework used to build web applications.
+Django follows the Model-View-Template architecture.
+Django includes an ORM that allows developers to interact with databases using Python objects.
+
+FastAPI is a modern Python framework for building APIs.
+FastAPI supports asynchronous programming and is commonly used to build high-performance APIs.
+FastAPI automatically generates interactive API documentation.
+
+REST APIs allow applications to communicate over HTTP.
+Common HTTP methods include GET, POST, PUT, PATCH, and DELETE.
+GET is generally used to retrieve resources, while POST is generally used to create resources.
+
+Authentication verifies the identity of a user.
+Authorization determines what an authenticated user is allowed to access.
+JWT is commonly used for token-based authentication in APIs.
