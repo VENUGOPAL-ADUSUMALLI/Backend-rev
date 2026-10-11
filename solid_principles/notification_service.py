@@ -1,3 +1,3 @@
 class NotificationService:
-    def send_email(self,email):
-        print(f"Sending order confirmation to {email}")
+    def send_email(self,email,order):
+        print(f"Sending order confirmation to {email}, {order}")

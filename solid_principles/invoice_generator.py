@@ -1,4 +1,4 @@
 class InvoiceGenerator:
 
-    def generate_invoice(self):
-        print("Generating PDF invoice...")
+    def generate_invoice(self,order):
+        print(f"Generating {order} PDF invoice...")

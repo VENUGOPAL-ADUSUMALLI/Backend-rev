@@ -1,8 +1,11 @@
 from models import Product, User, Order
-from solid_principles.order_service import OrderService
-from solid_principles.payment import Payment
+from solid_principles.card_payment import CardPayment
 from solid_principles.invoice_generator import InvoiceGenerator
 from solid_principles.notification_service import NotificationService
+from solid_principles.order_respository import OrderRepository
+from solid_principles.order_service import OrderService
+from solid_principles.refund_service import Refundable
+from solid_principles.upi_payment import UPIPayment
 
 user = User(
     1,
@@ -20,19 +23,33 @@ order = Order(user, products)
 print("Total:", order.calculate_total())
 
 email = NotificationService()
-email.send_email(user.email)
+email.send_email(user.email,order)
 
 invoice = InvoiceGenerator()
-invoice.generate_invoice()
-
-payment_method = Payment()
-payment_method.pay("upi")
+invoice.generate_invoice(order)
 
 
-order_service = OrderService()
+upi = UPIPayment()
+upi.pay()
+
+card = CardPayment()
+card.pay()
+
+repo = OrderRepository()
+invoice = InvoiceGenerator()
+notification = NotificationService()
+
+order_service = OrderService(upi, repo, invoice,notification)
 
 order_service.place_order(
     user,
-    products,
-    "upi"
+    products
 )
+
+
+
+def process_refund(payment:Refundable):
+    payment.refund()
+
+card = CardPayment()
+process_refund(card)
