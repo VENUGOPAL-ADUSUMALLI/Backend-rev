@@ -1,0 +1,13 @@
+Django is a Python web framework used to build web applications.
+
+Django ORM allows developers to interact with databases using Python
+objects instead of writing raw SQL queries.
+
+Django REST Framework helps developers build REST APIs.
+It provides serializers, API views, authentication, and permissions.
+
+Docker is a platform used to package applications and their
+dependencies into containers.
+
+Redis is an in-memory data store commonly used for caching,
+session storage, and background task coordination.
